@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>Worker369.Utility.FormatColumnSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Worker369.Utility.FormatColumnSettings</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <Label>HeaderStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f $_.HeaderStyle, ($_.HeaderStyle -replace [Char]27, '`e') , "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>BorderStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f $_.BorderStyle, ($_.BorderStyle -replace [Char]27, '`e') , "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>RightAlignTypes</Label>
+                <ScriptBlock>($_.RightAlignTypes | Sort-Object) -join "`n"</ScriptBlock>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

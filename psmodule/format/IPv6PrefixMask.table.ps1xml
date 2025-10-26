@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>Worker369.Utility.IPv6PrefixMask</Name>
+      <ViewSelectedBy>
+        <TypeName>Worker369.Utility.IPv6PrefixMask</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>PrefixLength</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Bits</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Size</Label>
+            <Alignment>Right</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <TableColumnItem>
+                <PropertyName>PrefixLength</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Bits</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Size</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

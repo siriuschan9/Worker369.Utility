@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>Worker369.Utility.Style</Name>
+      <ViewSelectedBy>
+        <TypeName>Worker369.Utility.Style</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <Label>Bold</Label>
+                <ScriptBlock>"{0}{1}{2}" -f $_.Bold, ($_.Bold -replace [Char]27, '`e') , $_.Reset</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Underline</Label>
+                <ScriptBlock>"{0}{1}{2}" -f $_.Underline, ($_.Underline -replace [Char]27, '`e') , $_.Reset</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Dim</Label>
+                <ScriptBlock>"{0}{1}{2}" -f $_.Dim, ($_.Dim -replace [Char]27, '`e') , $_.Reset</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Reset</Label>
+                <ScriptBlock>"{0}{1}{2}" -f $_.Reset, ($_.Reset -replace [Char]27, '`e') , $_.Reset</ScriptBlock>
+              </ListItem>
+
+              <ListItem>
+                <Label>Foreground.Green</Label>
+                <ScriptBlock>"{0}{1}{2}" -f $_.Foreground.Green, ($_.Foreground.Green -replace [Char]27, '`e') , $_.Reset</ScriptBlock>
+              </ListItem>
+
+              <ListItem>
+                <Label>Foreground.BrightGreen</Label>
+                <ScriptBlock>"{0}{1}{2}" -f $_.Foreground.BrightGreen, ($_.Foreground.BrightGreen -replace [Char]27, '`e') , $_.Reset</ScriptBlock>
+              </ListItem>
+
+              <ListItem>
+                <Label>Foreground.BrightMagenta</Label>
+                <ScriptBlock>"{0}{1}{2}" -f $_.Foreground.BrightMagenta, ($_.Foreground.BrightMagenta -replace [Char]27, '`e') , $_.Reset</ScriptBlock>
+              </ListItem>
+
+              <ListItem>
+                <Label>Foreground.BrightCyan</Label>
+                <ScriptBlock>"{0}{1}{2}" -f $_.Foreground.BrightCyan, ($_.Foreground.BrightCyan -replace [Char]27, '`e') , $_.Reset</ScriptBlock>
+              </ListItem>
+
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

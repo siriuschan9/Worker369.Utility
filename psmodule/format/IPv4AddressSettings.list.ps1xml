@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>Worker369.Utility.IPv4AddressSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Worker369.Utility.IPv4AddressSettings</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <Label>DisplayStyle</Label>
+                <ScriptBlock>$_.DisplayStyle</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>NetworkBitsStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f
+                    $_.NetworkBitsStyle,
+                    ($_.NetworkBitsStyle -replace [Char]27, '`e'),
+                    "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>HostBitsStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f
+                    $_.HostBitsStyle,
+                    ($_.HostBitsStyle -replace [Char]27, '`e'),
+                    "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

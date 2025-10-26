@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+	<ViewDefinitions>
+		<View>
+			<Name>Worker369.Utility.IPv4Address</Name>
+			<ViewSelectedBy>
+				<TypeName>Worker369.Utility.IPv4Address</TypeName>
+			</ViewSelectedBy>
+			<TableControl>
+				<TableHeaders>
+				<TableColumnHeader>
+					<Label>IPAddress</Label>
+				</TableColumnHeader>
+				<TableColumnHeader>
+					<Label>SubnetMask</Label>
+				</TableColumnHeader>
+				<TableColumnHeader>
+					<Label>NetworkId</Label>
+				</TableColumnHeader>
+				<TableColumnHeader>
+					<Label>HostId</Label>
+				</TableColumnHeader>
+				</TableHeaders>
+				<TableRowEntries>
+				<TableRowEntry>
+					<TableColumnItems>
+					<TableColumnItem>
+						<PropertyName>IPAddress</PropertyName>
+					</TableColumnItem>
+					<TableColumnItem>
+						<PropertyName>SubnetMask</PropertyName>
+					</TableColumnItem>
+					<TableColumnItem>
+						<PropertyName>NetworkId</PropertyName>
+					</TableColumnItem>
+					<TableColumnItem>
+						<PropertyName>HostId</PropertyName>
+					</TableColumnItem>
+					</TableColumnItems>
+				</TableRowEntry>
+				</TableRowEntries>
+			</TableControl>
+		</View>
+	</ViewDefinitions>
+</Configuration>

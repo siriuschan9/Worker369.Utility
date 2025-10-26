@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>Worker369.Utility.MySettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Worker369.Utility.MySettings</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+
+              <ListItem>
+                <Label>NumberInfo.DisplayStyle</Label>
+                <ScriptBlock>$_.NumberInfo.DisplayStyle</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>NumberInfo.Format.Unscaled</Label>
+                <ScriptBlock>$_.NumberInfo.Format.Unscaled</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>NumberInfo.Format.Scaled</Label>
+                <ScriptBlock>$_.NumberInfo.Format.Scaled</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>NumberInfo.Format.Fraction</Label>
+                <ScriptBlock>$_.NumberInfo.Format.Fraction</ScriptBlock>
+              </ListItem>
+
+              <ListItem>
+                <Label>ByteInfo.DefaultMetricSystem</Label>
+                <ScriptBlock>$_.ByteInfo.DefaultMetricSystem</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>ByteInfo.DisplayStyle</Label>
+                <ScriptBlock>$_.ByteInfo.DisplayStyle</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>ByteInfo.Format.Unscaled</Label>
+                <ScriptBlock>$_.ByteInfo.Format.Unscaled</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>ByteInfo.Format.Scaled</Label>
+                <ScriptBlock>$_.ByteInfo.Format.Scaled</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>ByteInfo.Format.Fraction</Label>
+                <ScriptBlock>$_.ByteInfo.Format.Fraction</ScriptBlock>
+              </ListItem>
+
+              <ListItem>
+                <Label>IPv4Address.DisplayStyle</Label>
+                <ScriptBlock>$_.IPv4Address.DisplayStyle</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>IPv4Address.NetworkBitsStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f
+                    $_.IPv4Address.NetworkBitsStyle,
+                    ($_.IPv4Address.NetworkBitsStyle -replace [Char]27, '`e'),
+                    "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>IPv4Address.HostBitsStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f
+                    $_.IPv4Address.HostBitsStyle,
+                    ($_.IPv4Address.HostBitsStyle -replace [Char]27, '`e'),
+                    "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+
+              <ListItem>
+                <Label>IPv6Address.DisplayStyle</Label>
+                <ScriptBlock>$_.IPv6Address.DisplayStyle</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>IPv6Address.NetworkBitsStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f
+                    $_.IPv6Address.NetworkBitsStyle,
+                    ($_.IPv6Address.NetworkBitsStyle -replace [Char]27, '`e'),
+                    "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>IPv6Address.HostBitsStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f
+                    $_.IPv6Address.HostBitsStyle,
+                    ($_.IPv6Address.HostBitsStyle -replace [Char]27, '`e'),
+                    "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+
+              <ListItem>
+                <Label>FormatColumn.HeaderStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f $_.FormatColumn.HeaderStyle, ($_.FormatColumn.HeaderStyle -replace [Char]27, '`e') , "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>FormatColumn.BorderStyle</Label>
+                <ScriptBlock>
+                  "{0}{1}{2}" -f $_.FormatColumn.BorderStyle, ($_.FormatColumn.BorderStyle -replace [Char]27, '`e') , "`e[0m"
+                </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>FormatColumn.RightAlignTypes</Label>
+                <ScriptBlock>($_.FormatColumn.RightAlignTypes | Sort-Object) -join "`n"</ScriptBlock>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

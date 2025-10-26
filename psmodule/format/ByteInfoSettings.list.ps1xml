@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>Worker369.Utility.ByteInfoSettings</Name>
+      <ViewSelectedBy>
+        <TypeName>Worker369.Utility.ByteInfoSettings</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <Label>DefaultMetricSystem</Label>
+                <ScriptBlock>$_.DefaultMetricSystem</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>DisplayStyle</Label>
+                <ScriptBlock>$_.DisplayStyle</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Format.Unscaled</Label>
+                <ScriptBlock>$_.Format.Unscaled</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Format.Scaled</Label>
+                <ScriptBlock>$_.Format.Scaled</ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Format.Fraction</Label>
+                <ScriptBlock>$_.Format.Fraction</ScriptBlock>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
