@@ -6,6 +6,9 @@ namespace Worker369.Utility;
 [Cmdlet(VerbsCommunications.Write, "Message")]
 public class Message_Write : PSCmdlet
 {
+    // single shared source id for all progress updates from this cmdlet
+    private const int _source_id = 999;
+
     [Parameter(ParameterSetName = "Progress", Mandatory = true)]
     public SwitchParameter Progress { get; set; }
 
@@ -20,6 +23,9 @@ public class Message_Write : PSCmdlet
 
     [Parameter(Mandatory = true, Position = 1)]
     public string Message { get; set; }
+
+    [Parameter(ParameterSetName = "Progress")]
+    public SwitchParameter Complete { get; set; }
 
     protected override void ProcessRecord()
     {
@@ -37,7 +43,12 @@ public class Message_Write : PSCmdlet
         switch (ParameterSetName)
         {
             case "Progress":
-                WriteProgress(new ProgressRecord(activityId: 1, Activity, Message)); break;
+                var pr = new ProgressRecord(activityId: 1, Activity, Message);
+
+                if (Complete.IsPresent) pr.RecordType = ProgressRecordType.Completed;
+
+                Host.UI.WriteProgress(_source_id, pr);
+                break;
 
             case "Output":
                 WriteObject(Message); break;
