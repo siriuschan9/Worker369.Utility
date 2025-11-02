@@ -79,5 +79,14 @@ public readonly struct Checkbox : IComparable, IComparable<Checkbox>
         return x.Value.CompareTo(y.Value);
     }
 
-    private int CompareDescription(Checkbox other) => Description.CompareTo(other.Description);
+    private int CompareDescription(Checkbox other)
+    {
+        if (Description == other.Description) return 0;
+
+        if (Description is null) return -1;
+
+        if (other.Description is null) return 1;
+
+        return Description.CompareTo(other.Description);
+    }
 }
