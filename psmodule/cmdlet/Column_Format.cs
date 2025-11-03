@@ -84,15 +84,19 @@ public class Column_Format : PSCmdlet
             // Don't print out the column used to group the objects.
             column_names.Remove(GroupBy);
 
-            Console.WriteLine();
+            WriteObject(string.Empty);
+            //Console.WriteLine();
 
             var groups = _objects.GroupBy(obj => GetPropertyValue(obj.Properties[GroupBy]));
 
             foreach (var group in groups)
             {
-                Console.WriteLine($"{_header_style}{GroupBy} : {_reset_style}{group.Key}");
-                Console.WriteLine();
+                WriteObject($"{_header_style}{GroupBy} : {_reset_style}{group.Key}");
+                WriteObject(string.Empty);
+                //Console.WriteLine($"{_header_style}{GroupBy} : {_reset_style}{group.Key}");
+                //Console.WriteLine();
                 PrintColumns(
+                    cmdlet            : this,
                     objects           : group,
                     column_names      : column_names,
                     column_widths     : column_widths,
@@ -102,13 +106,16 @@ public class Column_Format : PSCmdlet
                     border_style      : _border_style,
                     reset_style       : _reset_style
                 );
-                Console.WriteLine();
+                WriteObject(string.Empty);
+                //Console.WriteLine();
             }
         }
         else
         {
-            Console.WriteLine();
+            WriteObject(string.Empty);
+            //Console.WriteLine();
             PrintColumns(
+                cmdlet            : this,
                 objects           : _objects,
                 column_names      : column_names,
                 column_widths     : column_widths,
@@ -118,7 +125,8 @@ public class Column_Format : PSCmdlet
                 border_style      : _border_style,
                 reset_style       : _reset_style
             );
-            Console.WriteLine();
+            WriteObject(string.Empty);
+            //Console.WriteLine();
         }
     }
 
@@ -199,6 +207,7 @@ public class Column_Format : PSCmdlet
     }
 
     private static void PrintColumns(
+        PSCmdlet cmdlet,
         IEnumerable<PSObject> objects,
         IEnumerable<string> column_names,
         IDictionary<string, int> column_widths,
@@ -214,10 +223,12 @@ public class Column_Format : PSCmdlet
         string border = indent + MakeBorder(column_names, column_widths);
 
         // Print out the header.
-        Console.WriteLine($"{header_style}{header}{reset_style}");
+        cmdlet.WriteObject($"{header_style}{header}{reset_style}");
+        //Console.WriteLine($"{header_style}{header}{reset_style}");
 
         // Print out the border.
-        Console.WriteLine($"{border_style}{border}{reset_style}");
+        cmdlet.WriteObject($"{border_style}{border}{reset_style}");
+        //Console.WriteLine($"{border_style}{border}{reset_style}");
 
         // Print out the rows.
         foreach (var obj in objects)
@@ -230,14 +241,16 @@ public class Column_Format : PSCmdlet
             {
                 // Print out this inner row.
                 string row = indent + MakeRow(expanded_objects.ElementAt(i), column_names, column_widths);
-                Console.WriteLine(row);
+                cmdlet.WriteObject(row);
+                //Console.WriteLine(row);
 
                 // Print an empty line in between inner rows. This condition checks if there are more inner rows.
                 // if (has_row_separator && i != expanded_objects.Count() - 1) Console.WriteLine();
             }
 
             // Print separator in between outer rows.
-            if (has_row_separator) Console.WriteLine($"{border_style}{border}{reset_style}");
+            if (has_row_separator) //Console.WriteLine($"{border_style}{border}{reset_style}");
+                cmdlet.WriteObject($"{border_style}{border}{reset_style}");
         }
     }
 

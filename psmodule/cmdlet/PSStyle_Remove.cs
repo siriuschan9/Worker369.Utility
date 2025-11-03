@@ -17,7 +17,7 @@ public class PSStyle_Remove : PSCmdlet
 
     protected override void ProcessRecord()
     {
-        if (string.IsNullOrEmpty(Input)) return;
+        if (Input is null) return;
 
         WriteObject(Regex.Replace(Input, _style_pattern, string.Empty));
     }
