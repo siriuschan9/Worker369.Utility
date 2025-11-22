@@ -48,20 +48,24 @@ public readonly struct Checkbox : IComparable, IComparable<Checkbox>
     {
         var style = Style.Instance;
 
+        var novalue_char   = CheckboxSettings.Instance.NoValueChar;
+        var checked_char   = CheckboxSettings.Instance.CheckedChar;
+        var unchecked_char = CheckboxSettings.Instance.UncheckedChar;
+
         if (!IsChecked.HasValue)
             return IsPlainText
-                ? $"[ ? ] {Description}".TrimEnd(' ')
-                : $"{style.Dim}[ ? ] {Description}".TrimEnd(' ') + style.Reset;
+                ? $"[ {novalue_char} ] {Description}".TrimEnd(' ')
+                : $"{style.Dim}[ {novalue_char} ] {Description}".TrimEnd(' ') + style.Reset;
         else
         {
             if (IsPlainText)
                 return IsChecked.Value
-                    ? $"[ ✓ ] {Description}".TrimEnd(' ')
-                    : $"[   ] {Description}".TrimEnd(' ');
+                    ? $"[ {checked_char} ] {Description}".TrimEnd(' ')
+                    : $"[ {unchecked_char} ] {Description}".TrimEnd(' ');
             else
                 return IsChecked.Value
-                    ? $"{style.Dim}[{style.Reset} ✓ {style.Dim}]{style.Reset} {Description}".TrimEnd(' ')
-                    : $"{style.Dim}[   ] {Description}".TrimEnd(' ') + style.Reset;
+                    ? $"{style.Dim}[{style.Reset} {checked_char} {style.Dim}]{style.Reset} {Description}".TrimEnd(' ')
+                    : $"{style.Dim}[ {unchecked_char} ] {Description}".TrimEnd(' ') + style.Reset;
         }
     }
 
