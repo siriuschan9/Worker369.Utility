@@ -132,11 +132,11 @@ CmdletsToExport = @(
 
     # IPv4
     'New-IPv4SubnetMask', 'New-IPv4Address', 'New-IPv4Subnet', 'Join-IPv4Subnet', 'Split-IPv4Subnet',
-    'Test-IPv4CidrOverlap',
+    'Test-IPv4CidrOverlap', 'Test-IsValidIPv4'
 
     # IPv6
     'New-IPv6PrefixMask', 'New-IPv6Address', 'New-IPv6Subnet', 'Split-IPv6Subnet', 'Join-IPv6Subnet',
-    'Test-IPv6CidrOverlap'
+    'Test-IPv6CidrOverlap', 'Test-IsValidIPv6'
 )
 
 # Variables to export from this module
@@ -152,7 +152,13 @@ AliasesToExport = @(
     'number', 'byte',
 
     # IP
-    'ip', 'ip6', 'subnet', 'subnet6', 'mask', 'mask6', 'split', 'split6', 'join', 'join6', 'overlap?', 'overlap6?'
+    'ip', 'ip6',
+    'subnet', 'subnet6',
+    'mask', 'mask6',
+    'split', 'split6',
+    'join', 'join6',
+    'overlap?', 'overlap6?',
+    'is_ipv4?', 'is_ipv6?'
 )
 
 # DSC resources to export from this module
