@@ -19,3 +19,9 @@ public sealed class CheckboxSettings
         NoValueChar = '?';
     }
 }
+
+/*
+○   9675    25cb
+●   9679    25cf
+✓   10003   2713
+*/

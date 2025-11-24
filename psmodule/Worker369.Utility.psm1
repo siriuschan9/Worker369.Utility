@@ -6,12 +6,12 @@ $_my_settings_params = @{
     Description = 'All format settings.'
 }
 
-$_checkbox_info_params = @{
-    Name        = 'checkbox_info_settings'
+$_checkbox_params = @{
+    Name        = 'checkbox_settings'
     Value       = [Worker369.Utility.CheckboxSettings]::Instance
     Option      = [System.Management.Automation.ScopedItemOptions]::ReadOnly
     Scope       = 'Script'
-    Description = 'Checkbox format settings.'
+    Description = 'Checkbox settings.'
 }
 
 $_number_info_params = @{
@@ -55,7 +55,7 @@ $_format_column_params = @{
 }
 
 Set-Variable @_my_settings_params
-Set-Variable @_checkbox_info_params
+Set-Variable @_checkbox_params
 Set-Variable @_byte_info_params
 Set-Variable @_number_info_params
 Set-Variable @_ipv4_address_params
@@ -66,7 +66,7 @@ Set-Variable @_format_column_params
 # We must explicitly specify to export cmdlets and aliases.
 Export-ModuleMember -Variable @(
     'my_settings',
-    'checkbox_info_settings',
+    'checkbox_settings',
     'byte_info_settings',
     'number_info_settings',
     'ipv4_address_settings',
