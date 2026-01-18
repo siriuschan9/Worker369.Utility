@@ -70,6 +70,19 @@ public class Html_Format : PSCmdlet
         }
         else
         {
+            // Build the top part of the html document.
+            BeginHtml(html);
+
+            // Build one html table for each group.
+            AppendHtmlTable(
+                html: html,
+                group_name: null,
+                group_value: null,
+                objects: _objects, column_names: column_names
+            );
+
+            // Finish the html document.
+            EndHtml(html);
         }
 
         WriteObject(html.ToString());
