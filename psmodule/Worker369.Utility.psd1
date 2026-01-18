@@ -115,6 +115,7 @@ CmdletsToExport = @(
 
     # Utilities
     'Format-Column',
+    'Format-Html',
     'New-Checkbox',
     'Remove-PSStyle',
     'Show-LineNumber',
@@ -146,7 +147,7 @@ VariablesToExport = '*'
 AliasesToExport = @(
 
     # Utilities
-    'fcol', 'checkbox', 'style_rm', 'line', 'message', 'to_epoch', 'from_epoch',
+    'fcol', 'fhtm','checkbox', 'style_rm', 'line', 'message', 'to_epoch', 'from_epoch',
 
     # NumberInfo, ByteIno
     'number', 'byte',
