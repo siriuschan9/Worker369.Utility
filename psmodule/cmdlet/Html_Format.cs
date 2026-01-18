@@ -103,6 +103,7 @@ public class Html_Format : PSCmdlet
         html.AppendLine("""
         <html>
         <head>
+            <meta charset="UTF-8">
             <style>
                 table.outer {
                     width: 100%;
