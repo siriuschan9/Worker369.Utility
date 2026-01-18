@@ -117,6 +117,7 @@ CmdletsToExport = @(
     'Format-Column',
     'Format-Html',
     'New-Checkbox',
+    'Out-Json',
     'Remove-PSStyle',
     'Show-LineNumber',
     'Write-Message',
@@ -147,7 +148,7 @@ VariablesToExport = '*'
 AliasesToExport = @(
 
     # Utilities
-    'fcol', 'fhtm','checkbox', 'style_rm', 'line', 'message', 'to_epoch', 'from_epoch',
+    'fcol', 'fhtm','checkbox', 'style_rm', 'line', 'message', 'to_epoch', 'from_epoch', 'json'
 
     # NumberInfo, ByteIno
     'number', 'byte',
