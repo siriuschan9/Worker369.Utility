@@ -106,13 +106,14 @@ public class Html_Format : PSCmdlet
             <meta charset="UTF-8">
             <style>
                 table.outer {
-                    width: 100%;
+                    width: max-content;
                     border-spacing: 0;
                     border-collapse: collapse;
                 }
                 table.inner {
                     border-spacing: 0;
                     border-collapse: collapse;
+                    width: 100%;
                     font-family: monaco;
                     font-size: 75%;
                     line-height: 2em;
