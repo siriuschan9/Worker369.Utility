@@ -61,7 +61,7 @@ public class Html_Format : PSCmdlet
                 AppendHtmlTable(
                     html: html,
                     group_name: GroupBy,
-                    group_value: group.Key.ToString(),
+                    group_value: group.Key?.ToString(),         // Bug Fix: Handle null group value.
                     objects: group, column_names: column_names
                 );
             }
@@ -114,7 +114,7 @@ public class Html_Format : PSCmdlet
                     border-spacing: 0;
                     border-collapse: collapse;
                     width: 100%;
-                    font-family: monaco;
+                    font-family: monaco, consolas, lucida console, monospace;
                     font-size: 75%;
                     line-height: 2em;
                     letter-spacing: -0.3;
