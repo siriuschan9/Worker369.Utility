@@ -4,8 +4,6 @@
 
 - This module itself is not hardened and not intended to be production-ready but anyone can adapt it to meet their own needs.
 
-- I started this module to teach IP addressing to junior engineers in my previous job, and gradually added a few other utilities to support my work.
-
 
 ## Commands In This Module
 
@@ -29,11 +27,14 @@
 | `Join-IPv6Address`     | `join6`      | This cmdlet performs IPv6 CIDR aggregation/summarization.
 | `Split-IPv6Address`    | `split6`     | This cmdlet divides a IPv6 CIDR block to smaller blocks.
 | `Test-IPv6CidrOverlap` | `overlap6`   | This cmdlet test whether two IPv6 CIDR overlaps.
-| `New-ErrorRecord`      | `-`          | This cmdlet creates a new `ErrorRecord` object
+| 'New-CompletionResult' | '-'          | This cmdlet creates a new 'CompletionResult' object.
+| `New-ErrorRecord`      | `-`          | This cmdlet creates a new `ErrorRecord` object.
 | `Pop-ErrorRecord`      | `-`          | This cmdlet removes the last error from the `$Error` collection.
 | `Remove-PSStyle`       | `-`          | This cmdlet strips out Styling ANSI codes from the input.
 | `Write-Message`        | `-`          | This cmdlet prints out messages either to Progress or Verbose or Output streams.
 | `Format-Column`        | `fcol`       | This cmdlet is a custom implementation of Format-Table that prints border lines.
+| 'Format-Html'          | 'fhtm'       | This cmdlet prints out a html table from PSObjects in the pipeline.
+| 'Out-Json'             | 'json'       | This cmdlet prints out prettified JSON document from a JSON string.
 
 
 ## How You Can Learn IP Addressing Using This Module
