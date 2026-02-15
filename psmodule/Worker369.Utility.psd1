@@ -122,6 +122,9 @@ CmdletsToExport = @(
     'Show-LineNumber',
     'Write-Message',
 
+    # CompletionResult,
+    'New-CompletionResult',
+
     # ErrorRecord
     'New-ErrorRecord', 'Pop-ErrorRecord',
 

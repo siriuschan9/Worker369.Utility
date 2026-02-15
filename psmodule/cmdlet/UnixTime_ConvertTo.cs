@@ -26,7 +26,6 @@ public class UnixTime_ConvertTo : PSCmdlet
         }
         catch (ArgumentException ex)
         {
-
             var error_record = new ErrorRecord(
                 ex,
                 errorId: "DateTimeOutOfRange",
@@ -37,7 +36,6 @@ public class UnixTime_ConvertTo : PSCmdlet
         }
         catch (Exception ex)
         {
-
             var error_record = new ErrorRecord(
                 ex,
                 errorId: "UnixTimeConversionFailed",
