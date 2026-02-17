@@ -116,8 +116,8 @@ CmdletsToExport = @(
     # Utilities
     'Format-Column',
     'Format-Html',
+    'Format-Json',
     'New-Checkbox',
-    'Out-Json',
     'Remove-PSStyle',
     'Show-LineNumber',
     'Write-Message',

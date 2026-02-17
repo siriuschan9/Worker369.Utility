@@ -4,9 +4,9 @@ using System.Text.Json;
 
 namespace Worker369.Utility;
 
-[Cmdlet(VerbsData.Out, "Json")]
+[Cmdlet(VerbsCommon.Format, "Json")]
 [Alias("json")]
-public class Json_Out : PSCmdlet
+public class Json_Format : PSCmdlet
 {
     private readonly JsonSerializerOptions _options = new()
     {
