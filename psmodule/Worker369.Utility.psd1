@@ -151,7 +151,7 @@ VariablesToExport = '*'
 AliasesToExport = @(
 
     # Utilities
-    'fcol', 'fhtm','checkbox', 'style_rm', 'line', 'message', 'to_epoch', 'from_epoch', 'json'
+    'fcol', 'html', 'json', 'checkbox', 'style_rm', 'line', 'message', 'to_epoch', 'from_epoch',
 
     # NumberInfo, ByteIno
     'number', 'byte',
