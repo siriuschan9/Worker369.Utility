@@ -33,7 +33,7 @@
 | `Remove-PSStyle`       | `-`          | This cmdlet strips out Styling ANSI codes from the input.
 | `Write-Message`        | `-`          | This cmdlet prints out messages either to Progress or Verbose or Output streams.
 | `Format-Column`        | `fcol`       | This cmdlet is a custom implementation of Format-Table that prints border lines.
-| `Format-Html`          | `fhtm`       | This cmdlet prints out a html table from PSObjects in the pipeline.
+| `Format-Html`          | `html`       | This cmdlet prints out a html table from PSObjects in the pipeline.
 | `Format-Json`          | `json`       | This cmdlet prints out prettified JSON document from a JSON string.
 
 
