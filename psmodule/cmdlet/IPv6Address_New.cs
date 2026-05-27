@@ -7,7 +7,7 @@ namespace Worker369.Utility;
 [OutputType(typeof(IPv6Address))]
 public class IPv6Address_New : PSCmdlet
 {
-    [Parameter(Position = 0)]
+    [Parameter(Position = 0, ValueFromPipeline = true)]
     [ValidatePattern(
         @"^(" +
         @"([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|" +           // 1:2:3:4:5:6:7:8
