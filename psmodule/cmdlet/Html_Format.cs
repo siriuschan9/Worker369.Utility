@@ -7,7 +7,7 @@ using System.Text;
 namespace Worker369.Utility;
 
 [Cmdlet(VerbsCommon.Format, "Html")]
-[Alias("html")]
+[Alias("fhtml")]
 public class Html_Format : PSCmdlet
 {
     private List<PSObject> _objects;

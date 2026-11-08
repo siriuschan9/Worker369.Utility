@@ -5,7 +5,7 @@ using System.Management.Automation;
 namespace Worker369.Utility;
 
 [Cmdlet(VerbsCommon.Join, "IPv4Subnet", DefaultParameterSetName = "String")]
-[Alias("join")]
+[Alias("join4")]
 [OutputType(typeof(IPv4Subnet))]
 public class IPv4Subnet_Join : PSCmdlet
 {

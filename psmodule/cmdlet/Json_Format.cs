@@ -5,7 +5,7 @@ using System.Text.Json;
 namespace Worker369.Utility;
 
 [Cmdlet(VerbsCommon.Format, "Json")]
-[Alias("json")]
+[Alias("fjson")]
 public class Json_Format : PSCmdlet
 {
     private readonly JsonSerializerOptions _options = new()

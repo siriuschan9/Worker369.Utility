@@ -3,7 +3,7 @@ using System.Management.Automation;
 namespace Worker369.Utility;
 
 [Cmdlet(VerbsDiagnostic.Test, "IPv4CidrOverlap", DefaultParameterSetName = "String")]
-[Alias("overlap?")]
+[Alias("overlap4?")]
 [OutputType(typeof(bool))]
 public class CidrOverlap_Test : PSCmdlet
 {

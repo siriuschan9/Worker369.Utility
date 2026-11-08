@@ -121,28 +121,41 @@ CmdletsToExport = @(
     'Remove-PSStyle',
     'Remove-UrlEncoding',
     'Show-LineNumber',
+    'Split-String',
     'Write-Message',
 
     # CompletionResult,
     'New-CompletionResult',
 
     # ErrorRecord
-    'New-ErrorRecord', 'Pop-ErrorRecord',
+    'New-ErrorRecord',
+    'Pop-ErrorRecord',
 
     # UnixTime
-    'ConvertFrom-UnixTime', 'ConvertTo-UnixTime',
+    'ConvertFrom-UnixTime',
+    'ConvertTo-UnixTime',
 
     # NumberInfo, ByteInfo
     'New-NumberInfo',
     'New-ByteInfo',
 
     # IPv4
-    'New-IPv4SubnetMask', 'New-IPv4Address', 'New-IPv4Subnet', 'Join-IPv4Subnet', 'Split-IPv4Subnet',
-    'Test-IPv4CidrOverlap', 'Test-IsValidIPv4'
+    'New-IPv4SubnetMask',
+    'New-IPv4Address',
+    'New-IPv4Subnet',
+    'Join-IPv4Subnet',
+    'Split-IPv4Subnet',
+    'Test-IPv4CidrOverlap',
+    'Test-IsValidIPv4'
 
     # IPv6
-    'New-IPv6PrefixMask', 'New-IPv6Address', 'New-IPv6Subnet', 'Split-IPv6Subnet', 'Join-IPv6Subnet',
-    'Test-IPv6CidrOverlap', 'Test-IsValidIPv6'
+    'New-IPv6PrefixMask',
+    'New-IPv6Address',
+    'New-IPv6Subnet',
+    'Split-IPv6Subnet',
+    'Join-IPv6Subnet',
+    'Test-IPv6CidrOverlap',
+    'Test-IsValidIPv6'
 )
 
 # Variables to export from this module
@@ -152,19 +165,38 @@ VariablesToExport = '*'
 AliasesToExport = @(
 
     # Utilities
-    'fcol', 'html', 'json', 'checkbox', 'style_rm', 'line', 'message', 'to_epoch', 'from_epoch', 'urlen_rm',
+    'fcol',         # Format-Column
+    'fhtml',        # Format-Html
+    'fjson',        # Format-Json
+    'checkbox',     # New-Checkbox
+
+    'line',         # Show-LineNumber
+    'message',      # Write-Message
+    'to_epoch',     # ConvertTo-UnixTime
+    'from_epoch',   # ConvertFrom-UnixTime
+    'psstyle_rm',   # Remove-PSStyle
+    'urlen_rm',     # Remove-UrlEncoding
+    'str_split',    # Split-String
 
     # NumberInfo, ByteIno
-    'number', 'byte',
+    'number',       # New-NumberInfo
+    'byte',         # New-ByteInfo
 
     # IP
-    'ip', 'ip6',
-    'subnet', 'subnet6',
-    'mask', 'mask6',
-    'split', 'split6',
-    'join', 'join6',
-    'overlap?', 'overlap6?',
-    'is_ipv4?', 'is_ipv6?'
+    'ipv4',         # New-IPv4Address
+    'ipv6',         # New-IPv6Address
+    'subnet4',      # New-IPv4Subnet
+    'subnet6',      # New-IPv6Subnet
+    'mask4',        # New-IPv4SubnetMask
+    'mask6',        # New-IPv6PrefixMask
+    'split4',       # Split-IPv4Subnet
+    'split6',       # Split-IPv6Subnet
+    'join4',        # Join-IPv4Subnet
+    'join6',        # Join-IPv6Subnet
+    'overlap4?',    # Test-IPv4CidrOverlap
+    'overlap6?',    # Test-IPv6CidrOverlap
+    'is_ipv4?',     # Test-ValidIPv4
+    'is_ipv6?'      # Test-ValidIPv6
 )
 
 # DSC resources to export from this module

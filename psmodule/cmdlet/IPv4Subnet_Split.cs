@@ -3,7 +3,7 @@ using System.Management.Automation;
 namespace Worker369.Utility;
 
 [Cmdlet(VerbsCommon.Split, "IPv4Subnet", DefaultParameterSetName = "String")]
-[Alias("split")]
+[Alias("split4")]
 [OutputType(typeof(IPv4Subnet[]))]
 public class IPv4Subnet_Split : PSCmdlet
 {

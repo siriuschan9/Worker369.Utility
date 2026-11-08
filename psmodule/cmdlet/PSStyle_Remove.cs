@@ -6,7 +6,7 @@ namespace Worker369.Utility;
 
 [Cmdlet(VerbsCommon.Remove, "PSStyle")]
 [OutputType(typeof(string))]
-[Alias("style_rm")]
+[Alias("psstyle_rm")]
 public class PSStyle_Remove : PSCmdlet
 {
     private static readonly string _style_pattern = @"\e\[\d{1,3}(;\d{1,3})*m";

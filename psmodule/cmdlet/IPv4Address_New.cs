@@ -3,7 +3,7 @@ using System.Management.Automation;
 namespace Worker369.Utility;
 
 [Cmdlet(VerbsCommon.New, "IPv4Address")]
-[Alias("ip")]
+[Alias("ipv4")]
 [OutputType(typeof(IPv4Address))]
 public class IPv4Address_New : PSCmdlet
 {

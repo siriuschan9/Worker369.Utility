@@ -3,7 +3,7 @@ using System.Management.Automation;
 namespace Worker369.Utility;
 
 [Cmdlet(VerbsCommon.New, "IPv4Subnet")]
-[Alias("subnet")]
+[Alias("subnet4")]
 [OutputType(typeof(IPv4Subnet))]
 public class IPv4Subnet_New : PSCmdlet
 {

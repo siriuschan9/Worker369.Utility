@@ -3,7 +3,7 @@ using System.Management.Automation;
 namespace Worker369.Utility;
 
 [Cmdlet(VerbsCommon.New, "IPv4SubnetMask")]
-[Alias("mask")]
+[Alias("mask4")]
 [OutputType(typeof(IPv4SubnetMask))]
 public class IPv4SubnetMask_New : PSCmdlet
 {
